@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="theme-color" content="#18251f" />
+    <title>Backcountry — Online Trail Drive</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main id="game-shell">
+      <div id="viewport" aria-label="3D off-road driving game"></div>
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Backcountry home"><span class="brand-mark">B</span><span>BACKCOUNTRY<small>ONLINE TRAIL DRIVE</small></span></a>
+        <div class="connection"><i id="connection-light"></i><span id="connection-label">CONNECTING</span><span class="separator">/</span><span id="players-online">1 DRIVER</span></div>
+      </header>
+      <section class="drive-hud" aria-live="polite">
+        <div class="speed-card"><strong id="speed-value">000</strong><span>KM/H</span></div>
+        <div class="hud-divider"></div>
+        <div class="surface-info"><span class="eyebrow">SURFACE</span><strong id="surface-value">TRAIL</strong><span class="coordinates" id="coordinates">0.0 / 0.0</span></div>
+      </section>
+      <section class="vehicle-picker" aria-label="Choose a vehicle">
+        <span class="eyebrow">YOUR VEHICLE</span>
+        <button data-vehicle="trail" class="vehicle-option active"><i class="vehicle-dot trail-dot"></i><span>Trail Scout</span><small>ALL-ROUND</small></button>
+        <button data-vehicle="rally" class="vehicle-option"><i class="vehicle-dot rally-dot"></i><span>Ridge Rally</span><small>FAST</small></button>
+        <button data-vehicle="rock" class="vehicle-option"><i class="vehicle-dot rock-dot"></i><span>Rock Crawler</span><small>GRIP</small></button>
+      </section>
+      <div class="bottom-hint"><span>WASD</span> DRIVE <span class="hint-sep">·</span><span>SPACE</span> HANDBRAKE <span class="hint-sep">·</span> FIND YOUR OWN WAY</div>
+      <div id="notice" class="notice" role="status">Procedural backcountry is ready. Pick a vehicle and drive.</div>
+      <div class="crosshair" aria-hidden="true">+</div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

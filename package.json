@@ -1,0 +1,15 @@
+{
+  "name": "trailhead-network-port",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Original browser-based multiplayer off-road driving game with procedural terrain and tuned vehicle handling.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
